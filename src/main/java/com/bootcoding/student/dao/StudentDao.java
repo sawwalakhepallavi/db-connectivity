@@ -51,7 +51,7 @@ public class StudentDao {
     public void setStudent(){
         try {
             StudentService studentService=new StudentService();
-            ArrayList<Student> students= (ArrayList<Student>) studentService.insertStudent(5);
+            ArrayList<Student> students= (ArrayList<Student>) studentService.insertStudent(10);
             PreparedStatement psmt=con.prepareStatement("insert into student values (?,?,?,?,?,?)");
             for(Student row: students){
                 psmt.setInt(1,row.getID());

@@ -41,10 +41,11 @@ public class StudentService {
         int randomIndex = new Random().nextInt(names.length);
         return names[randomIndex];
     }
+    int min = 201;
     public int grtId() {
-        int min = 201;
-        int max = 210;
-        return min + new Random().nextInt(max-min);
+
+        min=min+1;
+        return min;
 
     }
     public int randomContact() {
