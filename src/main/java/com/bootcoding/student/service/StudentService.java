@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Random;
 
 public class StudentService {
-    public List<Student> insertStudent(int size){
+    public List<Student> setStudent(int size){
         ArrayList<Student> stud=new ArrayList<>();
         for(int i=0;i<size;i++){
             Student student=new Student();
@@ -41,9 +41,8 @@ public class StudentService {
         int randomIndex = new Random().nextInt(names.length);
         return names[randomIndex];
     }
-    int min = 201;
+    int min = 1;
     public int grtId() {
-
         min=min+1;
         return min;
 
