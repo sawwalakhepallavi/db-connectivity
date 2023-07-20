@@ -1,5 +1,6 @@
 package com.bootcoding.student.application;
 
+import com.bootcoding.student.dao.PatientDao;
 import com.bootcoding.student.dao.RatingDao;
 import com.bootcoding.student.dao.StudentDao;
 import com.bootcoding.student.model.Student;
@@ -26,6 +27,7 @@ public class StudentApplication {
             int id = st.getID();
             rs.saveRating(id);
         }
+
 
 
     }

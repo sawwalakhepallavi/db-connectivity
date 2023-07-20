@@ -9,8 +9,5 @@
         <module name="db-connectivity" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="db-connectivity" target="19" />
-    </bytecodeTargetLevel>
   </component>
 </project>
