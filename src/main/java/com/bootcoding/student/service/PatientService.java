@@ -39,7 +39,7 @@ public class PatientService {
         return names[name];
     }
     public String randomDisease(){
-        String[] diseases={"cancer","tb","stork","join-disk","pneumonia","surer","piles"};
+        String[] diseases={"cancer","tb","stork","join-disk","pneumonia","surer","piles","diabetic"};
         return diseases[new Random().nextInt(diseases.length)];
     }
 

@@ -15,5 +15,6 @@ public class PatientApplication {
         PatientService patientService=new PatientService();
         List<Patient> patientsList=patientService.setPatient(100);
         patientDao.insertPatient(patientsList);
+        patientDao.fetchPatient();
     }
 }

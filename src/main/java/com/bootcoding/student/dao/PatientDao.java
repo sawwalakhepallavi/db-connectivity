@@ -3,10 +3,7 @@ package com.bootcoding.student.dao;
 import com.bootcoding.student.model.Patient;
 import com.bootcoding.student.service.PatientService;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.List;
 
 public class PatientDao {
@@ -26,6 +23,22 @@ public class PatientDao {
         }
         pmt.close();
         con.close();
+    }
+
+    public void fetchPatient() throws SQLException {
+        DaoService daoService=new DaoService();
+        Connection con= daoService.getConnection();
+        Statement statement = con.createStatement();
+        ResultSet rs= statement.executeQuery("select * from hospitaldb where city='nagpur' and disease='diabetic'");
+        while(rs.next()){
+            System.out.println("ID :- "+rs.getInt("id"));
+            System.out.println("Patient Name :-" + rs.getString("name"));
+            System.out.println("Diseases :-"+ rs.getString("disease"));
+            System.out.println("Mobile number :-" + rs.getInt(4));
+            System.out.println("city :-"+ rs.getString(5));
+            System.out.println("Email:- "+ rs.getString(6));
+        }
+        rs.close();
 
     }
 }
